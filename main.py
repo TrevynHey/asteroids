@@ -1,12 +1,6 @@
 # this allows us to use code from
 # the open-source pygame library
 # throughout this file
-import pygame
-from constants import *
-from player import *
-from asteroid import *
-from asteroidfield import *
-from shot import *
 
 def main():
     pygame.init()
@@ -43,7 +37,7 @@ def main():
                 return
             for shot in shots:
                 if shot.collide(object):
-                    object.kill()
+                    object.split()
                     shot.kill()
 
 if __name__ == "__main__":
