@@ -41,6 +41,10 @@ def main():
             if player.collide(object):
                 print("Game over!")
                 return
+            for shot in shots:
+                if shot.collide(object):
+                    object.kill()
+                    shot.kill()
 
 if __name__ == "__main__":
     main()
